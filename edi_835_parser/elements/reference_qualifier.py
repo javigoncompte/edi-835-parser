@@ -6,7 +6,8 @@ reference_qualifiers = {
 	'0K': 'policy form identifying number',
 	'PQ': 'payee identification',
 	'TJ': 'federal taxpayer identification number',
-	'LU': 'location number'
+	'LU': 'location number',
+	'2U': 'Payer Identification Number'
 }
 
 

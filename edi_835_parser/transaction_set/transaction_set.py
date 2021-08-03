@@ -33,7 +33,6 @@ class TransactionSet:
 	@property
 	def payer(self) -> OrganizationLoop:
 		payer = [o for o in self.organizations if o.organization.type == 'payer']
-		assert len(payer) == 1
 		return payer[0]
 
 	def to_dataframe(self) -> pd.DataFrame:
