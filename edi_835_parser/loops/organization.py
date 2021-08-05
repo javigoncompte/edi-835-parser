@@ -1,4 +1,4 @@
-from typing import Iterator, Tuple, Optional
+from typing import Iterator, Tuple, Optional, List
 
 from edi_835_parser.segments.organization import Organization as OrganizationSegment
 from edi_835_parser.segments.claim import Claim as ClaimSegment
@@ -43,11 +43,11 @@ class Organization:
 				elif identifier == LocationSegment.identification:
 					organization.location = LocationSegment(segment)
 
-				elif identifier == ReferenceSegment.identifier:
-					reference = ReferenceSegment(segment)
-					organization.references.append(reference)
+				elif identifier == ReferenceSegment.identification:
+					references = ReferenceSegment(segment)
+					organization.references.append(references)
 					segment = None
-
+     
 				elif identifier in cls.terminating_identifiers:
 					return organization, segments, segment
 

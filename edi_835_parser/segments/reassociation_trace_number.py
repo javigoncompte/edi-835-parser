@@ -13,9 +13,9 @@ class ReassociationTraceNumber:
 		segment = split_segment(segment)
 
 		self.identifier = segment[0]
-		self.check_eft = segment[1]
-		self.originating_company_tax_id = segment[2]
-		self.originating_company_id = segment[3]
+		self.check_eft = segment[2]
+		self.originating_company_tax_id = segment[3]
+		self.originating_company_id = segment[4]
 
 
 	def __repr__(self):
